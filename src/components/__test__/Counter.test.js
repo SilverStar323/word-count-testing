@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import { Counter } from "../Counter";
 
 describe("Counter Component Test", () => {
@@ -16,7 +17,9 @@ describe("Counter Component Test", () => {
   });
 
   it("render the world result", () => {
-    render(<Counter /> )
+    render(<Counter /> );
+    const wordLength = screen.getByText("Word: 0");
+    expect(wordLength).toBeInTheDocument();
   });
 
 });
