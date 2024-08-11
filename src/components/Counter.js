@@ -14,6 +14,7 @@ export const Counter = () => {
       <button
         className="clear"
         disabled={!strText}
+        data-testid="clearBtn"
         onClick={() => setStrText("")}>
           Clear
       </button>

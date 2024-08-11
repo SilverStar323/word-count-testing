@@ -12,7 +12,7 @@ export const Joke = () => {
       />
       <section className="joke">
         <p>
-          <span>{joke || "Loading Joke..."}</span>
+          <span data-testid="joke">{joke}</span>
           <span> - api.cucknorris.io</span>
         </p>
       </section>

@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import NotFoundImage from "../assets/page-not-found.jpg";
-import { Header } from "../components";
 
 export const PageNotFound = () => {
   return (
     <main>
       <section className="pnf">
         <div className="oops">
-          <p>Ooops - Page Not Found!</p>
-          <img src={NotFoundImage} alt="" />
+          <p data-testid="pnfText">Ooops - Page Not Found!</p>
+          <img src={NotFoundImage} alt="Page Not Found" />
           <Link to="/">
-            <button>Go Back To Word Counter</button>
+            <button data-testid="homeBtn">Go Back To Word Counter</button>
           </Link>
         </div>
       </section>
